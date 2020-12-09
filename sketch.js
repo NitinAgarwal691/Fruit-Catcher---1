@@ -41,6 +41,10 @@ function draw() {
    if (gameState === 1) {
      clear(); 
      game.play();
+     
+     if(fruitGroup.isTouching(player1) || fruitGroup.isTouching(player2)) {
+      fruitGroup.destroyEach();
+     } 
    }
    if (gameState === 2) {
     
